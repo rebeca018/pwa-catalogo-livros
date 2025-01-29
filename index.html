@@ -1,13 +1,50 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="exemplo de fallback">
+    <title>Seu catálogo de livros lidos</title>
+    <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--viewport para designers responsivos (mobo), content é a configuração-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <meta name="theme-color" content="white" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="favicon.ico">
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/db.js"></script>
+</head>
+
+<body class="fullscreen">
+    <div class="container">
+        <h1 class="title">Adicione seus livros lidos</h1>
+        <div style="text-align: center;">
+            <main id="camera">
+                <!-- Camera sensor (lente) -->
+               <canvas id="camera--sensor" ></canvas>
+                <!-- Camera view (visualização) -->
+                <video id="camera--view" autoplay playsinline></video>
+                <!-- Camera output -->
+                <img src="//:0" alt="" id="camera--output">
+                <!-- Camera botão de tirar foto -->
+                <button id="camera--trigger">tirar foto</button>
+                </main>
+        </div>
+        <div class="div-ib">
+            <input type="text" id="nome" placeholder="Nome do Livro" class="input"/>
+            <input type="text" id="autor" placeholder="Autor" class="input"/>
+            <input type="date" id="data" placeholder="Data" class="input"/>
+            <input type="text" id="genero" placeholder="Gênero" class="input"/>
+
+            <button id="btnSalvar">Salvar</button>
+            <button id="btnListar">Listar</button>
+
+        </div>
+        <div id="resultados">
+
+        </div>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,188 @@
+body {
+    font-family: sans-serif;
+}
+
+html,
+.fullscreen {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #eddcfa;
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    color: #bb90db;
+}
+
+#camera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#camera--view, 
+#camera--sensor {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #bb90db;
+    border-radius: 5px;
+}
+
+#camera--output {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #bb90db;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    display: block;
+}
+
+#camera--trigger {
+    background-color: #bb90db;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#camera--trigger:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+.taken{
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.div-ib{
+    text-align: center;
+    padding: 10px;
+}
+
+.input{
+    border-radius: 10px;
+    background-color: #c4a1df;
+    border: 2px solid #4d0087;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px; 
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.input:focus {
+    background-color: #d4b1f2;
+    border-color: #7200a8;
+    box-shadow: 0 0 10px rgba(114, 0, 168, 0.5);
+}
+
+.input:hover {
+    background-color: #c59be8;
+    border-color: #5e009b;
+    cursor: pointer;
+}
+
+button {
+    background-color: #9e82bf;
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 14px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #9e82bf; 
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #8e68b8;
+    transform: scale(0.95);
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+
+#resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.livro-card {
+    background-color: #eddcfa;
+    border: 2px solid #bb90db;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.livro-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.livro-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.livro-nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5b2387;
+    margin: 10px 0 5px;
+}
+
+.livro-autor, .livro-data, .livro-genero {
+    font-size: 0.9rem;
+    color: #5e009b;
+    margin: 5px 0;
+}
